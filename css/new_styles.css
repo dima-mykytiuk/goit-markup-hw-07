@@ -978,13 +978,37 @@ img {
     border-top: 0;
 }
 
+
+.hide {
+    display: none;
+}
+
 @media screen and (min-width: 768px) {
+
+    .contacts {
+        margin-bottom: 0;
+    }
+
+    .mobile-menu-contacts {
+        color: #2E2F42;
+    }
+
+    .mail {
+        order: 0;
+    }
+
+    .hide {
+        display: block;
+    }
+
+
     .mobile-menu {
         display: none;
     }
 
     .navigation {
-        display: flex;
+        display: none;
+        /* display: flex; */
         position: relative;
         height: 100%;
         background-color: transparent;
@@ -995,6 +1019,8 @@ img {
     .header-container {
         display: flex;
         flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
     }
 
     .mobile-menu-close {
@@ -1040,21 +1066,22 @@ img {
         letter-spacing: 0.04em;
     }
 
-    .contacts{
+    .contacts {
         gap: 4px;
     }
 
-    .header{
-        height: 70px;
+    .header {
+        padding: 12px 16px;
     }
 
-    .logo{
+    .logo {
         display: block;
     }
 
-    .header-nav{
+    .header-nav {
         padding-top: 0;
     }
+
     .intro {
         padding-bottom: 108px;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(/goit-markup-hw-07/images/index_images/intro-tablet.jpg);
@@ -1126,7 +1153,34 @@ img {
     }
 }
 
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
+    .intro {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(/goit-markup-hw-07/images/index_images/intro-tablet.jpg);
+    }
+}
+
+
 @media screen and (min-width: 1200px) {
+
+    .header {
+        padding: 24px 16px;
+    }
+
+    .bottom-mobile-menu {
+        margin-left: auto;
+    }
+
+    .header-container {
+        justify-content: flex-start;
+    }
+
+
+    .contacts {
+        flex-direction: row;
+        gap: 40px;
+        margin-right: 156px;
+    }
+
 
     .container {
         max-width: 1158px;
@@ -1254,5 +1308,19 @@ img {
     .footer-subscribe {
         margin-left: 20px;
         width: 453px;
+    }
+
+    .mail-content {
+        font-size: 16px;
+    }
+
+    .phone-content {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
+    .intro {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(/goit-markup-hw-07/images/index_images/intro-desktop.jpg);
     }
 }
