@@ -69,7 +69,9 @@ img {
 
 .is-open {
     /*transform: translateX(0);*/
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .mail-content {
@@ -81,7 +83,7 @@ img {
     color: #434455;
 }
 
-.mail{
+.mail {
     order: 2;
 }
 
@@ -104,12 +106,18 @@ img {
 .menu-socials {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 56px;
 }
 
 .menu-social-item {
     width: 48px;
     height: 48px;
+}
+
+.mobile-menu {
+    border: none;
+    background-color: transparent;
 }
 
 .mobile-menu-close {
@@ -151,7 +159,7 @@ img {
     background-color: #404BBF;
 }
 
-.header-nav{
+.header-nav {
     padding-top: 40px;
 }
 
@@ -163,12 +171,52 @@ img {
     text-transform: capitalize;
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    margin-bottom: 284px;
 }
 
 .nav-link {
     color: #2E2F42;
+    margin-bottom: 40px;
+}
+
+.header-link {
+    color: #2E2F42;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0ms;
+}
+
+.header-link:hover,
+.header-link:focus {
+    color: #404BBF;
+}
+
+.mobile-menu-contacts {
+    color: #404BBF;
+}
+
+.mail-content:hover,
+.mail-content:focus {
+    color: #404BBF;
+}
+
+.phone-content:hover,
+.phone-content:focus {
+    color: #404BBF;
+}
+
+.current {
+    color: #404BBF;
+}
+
+.current::after {
+    position: relative;
+    top: 24px;
+    content: "";
+    display: block;
+    height: 4px;
+    background-color: rgba(64, 75, 191, 1);
+    border-radius: 2px;
 }
 
 .header-logo {
@@ -542,7 +590,7 @@ img {
     background-color: transparent;
 }
 
-.footer-subscribe{
+.footer-subscribe {
     width: 100%;
 }
 
@@ -931,6 +979,82 @@ img {
 }
 
 @media screen and (min-width: 768px) {
+    .mobile-menu {
+        display: none;
+    }
+
+    .navigation {
+        display: flex;
+        position: relative;
+        height: 100%;
+        background-color: transparent;
+        padding: 0;
+        gap: 118px;
+    }
+
+    .header-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .mobile-menu-close {
+        display: none;
+    }
+
+    .mobile-menu-socials {
+        display: none;
+    }
+
+    .header-items {
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .nav-link {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+
+        /* OCEAN */
+        color: #404BBF;
+        margin-bottom: 0;
+    }
+
+    .mail-content {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        /* identical to box height, or 133% */
+        letter-spacing: 0.04em;
+    }
+
+    .phone-content {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        /* identical to box height, or 133% */
+        letter-spacing: 0.04em;
+    }
+
+    .contacts{
+        gap: 4px;
+    }
+
+    .header{
+        height: 70px;
+    }
+
+    .logo{
+        display: block;
+    }
+
+    .header-nav{
+        padding-top: 0;
+    }
     .intro {
         padding-bottom: 108px;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(/goit-markup-hw-07/images/index_images/intro-tablet.jpg);
@@ -960,12 +1084,9 @@ img {
         gap: 64px 24px;
         justify-content: center;
     }
-    .footer-subscribe {
-        width: 453px;
-    }
 
-    .footer-container:last-child{
-        justify-content: left;
+    .footer-subscribe {
+        width: 493px;
     }
 
     .footer {
@@ -979,15 +1100,16 @@ img {
         gap: 72px 24px;
         justify-content: center;
     }
+
     .footer-form {
         flex-direction: row;
     }
 
-    .footer-logo{
+    .footer-logo {
         justify-content: left;
     }
 
-    .footer-media-title{
+    .footer-media-title {
         text-align: left;
     }
 
@@ -998,16 +1120,18 @@ img {
     .footer-subscribe-title {
         text-align: left;
     }
-    .subscribe-btn{
+
+    .subscribe-btn {
         margin-left: 0;
     }
 }
 
 @media screen and (min-width: 1200px) {
 
-    .container{
+    .container {
         max-width: 1158px;
     }
+
     .section {
         padding-bottom: 120px;
     }
@@ -1093,7 +1217,8 @@ img {
         gap: 24px;
         flex-wrap: nowrap;
     }
-    .customer-link{
+
+    .customer-link {
         width: 168px;
     }
 
