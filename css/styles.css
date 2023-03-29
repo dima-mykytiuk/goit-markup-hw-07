@@ -869,11 +869,10 @@ img {
 .btn-nav-list {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    width: 318px;
+    align-items: center;
     gap: 24px;
+    flex-wrap: wrap;
     margin-bottom: 72px;
-    text-align: center;
 }
 
 .portfolio-nav-btn {
@@ -945,11 +944,6 @@ img {
     overflow: hidden;
 }
 
-.portfolio-image img {
-    width: 396px;
-    height: 280px;
-}
-
 .project-link:hover .overlay {
     transform: translatex(0);
 }
@@ -979,6 +973,10 @@ img {
 
 .hide {
     display: none;
+}
+
+.projects{
+    justify-content: center;
 }
 
 @media (min-device-pixel-ratio: 2),
