@@ -17,24 +17,126 @@
     <title>Portfolio</title>
 </head>
 <body>
-<!--<header class="header">-->
-<!--    <div class="container header-container">-->
-<!--        <nav class="header-nav">-->
-<!--            <a class="header-logo" href="./index.html"><span class="logo-split">Web</span>Studio</a>-->
-<!--            <ul class="header-items">-->
-<!--                <li class="nav-link"><a class="header-link" href="./index.html">Studio</a></li>-->
-<!--                <li class="nav-link"><a class="current" href="./portfolio.html">Portfolio</a></li>-->
-<!--                <li class="nav-link"><a class="header-link" href="">Contacts</a></li>-->
-<!--            </ul>-->
-<!--        </nav>-->
-<!--        <address class="address">-->
-<!--            <ul class="contacts">-->
-<!--                <li class="mail"><a class="mail-content" href="mailto:info@devstudio.com">info@devstudio.com</a></li>-->
-<!--                <li class="phone"><a class="phone-content" href="tel:+110001111111">+11 (000) 111-11-11</a></li>-->
-<!--            </ul>-->
-<!--        </address>-->
-<!--    </div>-->
-<!--</header>-->
+<header class="header">
+    <div class="header-container container">
+        <div class="logo">
+            <a class="header-logo" href="./index.html"><span class="logo-split">Web</span>Studio</a>
+            <button class="mobile-menu" type="button" aria-expanded="false">
+                <svg width="32px" height="32px">
+                    <use href="./images/icons.svg#icon-icon-menu"></use>
+                </svg>
+            </button>
+        </div>
+        <!-- <button class="mobile-menu-close hide" type="button">
+            <svg width="32px" height="32px" fill="black">
+                <use href="./images/icons.svg#icon-modal-close"></use>
+            </svg>
+        </button> -->
+        <nav class="header-nav hide">
+            <ul class="header-items">
+                <li class="nav-link"><a class="header-link mobile-menu-contacts current" href="./index.html">Studio</a></li>
+                <li class="nav-link"><a class="header-link" href="./portfolio.html">Portfolio</a></li>
+                <li class="nav-link"><a class="header-link " href="">Contacts</a></li>
+            </ul>
+        </nav>
+        <div class="bottom-mobile-menu hide">
+            <address class="address">
+                <ul class="contacts">
+                    <li class="mail"><a class="mail-content" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                    </li>
+                    <li class="phone"><a class="phone-content" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
+                </ul>
+            </address>
+            <div class="mobile-menu-socials">
+                <ul class="menu-socials">
+                    <li class="menu-social-item">
+                        <a class="menu-social-link" href="./index.html">
+                            <svg class="menu-social-icon" width="24px" height="24px">
+                                <use href="./images/icons.svg#icon-instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="menu-social-item">
+                        <a class="menu-social-link" href="./index.html">
+                            <svg width="24px" height="24px">
+                                <use href="./images/icons.svg#icon-twitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="menu-social-item">
+                        <a class="menu-social-link" href="./index.html">
+                            <svg width="24px" height="24px">
+                                <use href="./images/icons.svg#icon-facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="menu-social-item">
+                        <a class="menu-social-link" href="./index.html">
+                            <svg width="24px" height="24px">
+                                <use href="./images/icons.svg#icon-linkedin"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="navigation">
+            <button class="mobile-menu-close" type="button">
+                <svg width="32px" height="32px">
+                    <use href="./images/icons.svg#icon-modal-close"></use>
+                </svg>
+            </button>
+            <nav class="header-nav">
+                <ul class="header-items">
+                    <li class="nav-link"><a class="header-link mobile-menu-contacts" href="./index.html">Studio</a></li>
+                    <li class="nav-link"><a class="header-link" href="./portfolio.html">Portfolio</a></li>
+                    <li class="nav-link"><a class="header-link" href="">Contacts</a></li>
+                </ul>
+            </nav>
+            <div class="bottom-mobile-menu">
+                <address class="address">
+                    <ul class="contacts">
+                        <li class="mail"><a class="mail-content" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                        </li>
+                        <li class="phone"><a class="phone-content" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
+                    </ul>
+                </address>
+                <div class="mobile-menu-socials">
+                    <ul class="menu-socials">
+                        <li class="menu-social-item">
+                            <a class="menu-social-link" href="./index.html">
+                                <svg class="menu-social-icon" width="24px" height="24px">
+                                    <use href="./images/icons.svg#icon-instagram"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="menu-social-item">
+                            <a class="menu-social-link" href="./index.html">
+                                <svg width="24px" height="24px">
+                                    <use href="./images/icons.svg#icon-twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="menu-social-item">
+                            <a class="menu-social-link" href="./index.html">
+                                <svg width="24px" height="24px">
+                                    <use href="./images/icons.svg#icon-facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="menu-social-item">
+                            <a class="menu-social-link" href="./index.html">
+                                <svg width="24px" height="24px">
+                                    <use href="./images/icons.svg#icon-linkedin"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
 <main>
     <section class="portfolio section">
         <div class="container">
@@ -248,21 +350,20 @@
         <div class="footer-subscribe">
             <h3 class="footer-subscribe-title">Subscribe</h3>
             <form class="footer-form form">
-                <div class="subscribe-form">
-                    <label class="subscribe-label">
-                            <input
-                                    type="email"
-                                    class="footer-subscribe-content"
-                                    name="footer-email"
-                                    placeholder="E-mail"
-                                    required
-                            />
-                    </label>
-                </div>
+                <label class="subscribe-label">
+                    <input
+                            type="email"
+                            class="footer-subscribe-content"
+                            name="footer-email"
+                            placeholder="E-mail"
+                            required
+                    />
+                </label>
                 <button type="submit" class="subscribe-btn">Subscribe
                     <svg class="footer-subscribe-icon" width="24" height="24">
                         <use href="./images/icons.svg#icon-send"></use>
-                    </svg></button>
+                    </svg>
+                </button>
             </form>
         </div>
     </div>
