@@ -32,7 +32,6 @@ img {
 }
 
 .header {
-    padding: 24px 16px;
     border-bottom: 1px solid #E7E9FC;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
@@ -44,34 +43,27 @@ img {
 
 
 .navigation {
+    opacity: 0;
     padding: 40px;
-    display: none;
-    position: absolute;
+    background-color: #FFFFFF;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    background-color: #FFFFFF;
-
-
-    /* position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  padding: 32px;
-  background-color: #3f51b5;
-  z-index: 999;
-
-  transform: translateX(100%);
-  transition: transform 250ms ease-in-out; */
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-open {
-    /*transform: translateX(0);*/
+    opacity: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.header-container {
+    padding-top: 16px;
+    padding-bottom: 14px;
 }
 
 .mail-content {
@@ -124,19 +116,25 @@ img {
     position: absolute;
     width: 24px;
     height: 24px;
-    top: 40px;
-    right: 40px;
+    top: 25px;
+    right: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     background: #E7E9FC;
+    fill: black;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 100px;
     transition-property: background-color, fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-delay: 0ms;
+}
+
+.mobile-menu-close:hover {
+    background-color: rgba(64, 75, 191, 1);
+    fill: white;
 }
 
 .menu-social-link {
@@ -276,7 +274,7 @@ img {
 .intro {
     padding-top: 112px;
     padding-bottom: 112px;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(/goit-markup-hw-07/images/index_images/intro-mob.jpg);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(/goit-markup-hw-07/images/index_images/intro-mob-1x.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -983,6 +981,15 @@ img {
     display: none;
 }
 
+@media (min-device-pixel-ratio: 2),
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .intro {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(/goit-markup-hw-07/images/index_images/intro-mob-2x.jpg);
+    }
+}
+
 @media screen and (min-width: 768px) {
 
     .contacts {
@@ -1071,7 +1078,8 @@ img {
     }
 
     .header {
-        padding: 12px 16px;
+        padding-top: 12px;
+        padding-bottom: 16px;
     }
 
     .logo {
@@ -1084,7 +1092,7 @@ img {
 
     .intro {
         padding-bottom: 108px;
-        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(/goit-markup-hw-07/images/index_images/intro-tablet.jpg);
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(/goit-markup-hw-07/images/index_images/intro-tablet-1x.jpg);
     }
 
     .intro-container {
@@ -1151,11 +1159,23 @@ img {
     .subscribe-btn {
         margin-left: 0;
     }
+
+    .customer-link {
+        width: 168px;
+    }
+
+    .feature-title {
+        text-align: left;
+    }
+
+    .header-logo {
+        margin-right: 0;
+    }
 }
 
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
     .intro {
-        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(/goit-markup-hw-07/images/index_images/intro-tablet.jpg);
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(/goit-markup-hw-07/images/index_images/intro-tablet-2x.jpg);
     }
 }
 
@@ -1163,7 +1183,8 @@ img {
 @media screen and (min-width: 1200px) {
 
     .header {
-        padding: 24px 16px;
+        padding-top: 24px;
+        padding-bottom: 24px;
     }
 
     .bottom-mobile-menu {
@@ -1178,7 +1199,6 @@ img {
     .contacts {
         flex-direction: row;
         gap: 40px;
-        margin-right: 156px;
     }
 
 
@@ -1193,7 +1213,7 @@ img {
     .intro {
         padding-top: 188px;
         padding-bottom: 188px;
-        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(/goit-markup-hw-07/images/index_images/intro-desktop.jpg);
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(/goit-markup-hw-07/images/index_images/desktop-intro-title-1x.jpg);
     }
 
     .intro-title {
@@ -1317,10 +1337,15 @@ img {
     .phone-content {
         font-size: 16px;
     }
+
+    .logo {
+        margin-right: 76px;
+    }
 }
+
 
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
     .intro {
-        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(/goit-markup-hw-07/images/index_images/intro-desktop.jpg);
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(/goit-markup-hw-07/images/index_images/desktop-intro-title-2x.jpg);
     }
 }
