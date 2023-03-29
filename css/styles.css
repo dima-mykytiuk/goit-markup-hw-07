@@ -873,6 +873,7 @@ img {
     gap: 24px;
     flex-wrap: wrap;
     margin-bottom: 72px;
+    justify-content: center;
 }
 
 .portfolio-nav-btn {
@@ -975,7 +976,7 @@ img {
     display: none;
 }
 
-.projects{
+.projects {
     justify-content: center;
 }
 
@@ -989,6 +990,10 @@ img {
 }
 
 @media screen and (min-width: 768px) {
+
+    .container {
+        max-width: 768px;
+    }
 
     .contacts {
         margin-bottom: 0;
@@ -1331,7 +1336,7 @@ img {
         margin-right: 76px;
     }
 
-    .current::after{
+    .current::after {
         top: 34px;
     }
 }
