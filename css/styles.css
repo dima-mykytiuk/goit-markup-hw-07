@@ -863,7 +863,7 @@ img {
 }
 
 .portfolio {
-    padding-top: 48px;
+    padding-top: 96px;
 }
 
 .btn-nav-list {
@@ -1338,6 +1338,19 @@ img {
 
     .current::after {
         top: 34px;
+    }
+
+    .project-title {
+        margin-bottom: 8px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+        color: #2E2F42;
+    }
+
+    .project-info {
+        font-weight: 400;
+        color: #434455;
     }
 }
 
